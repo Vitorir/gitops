@@ -9,5 +9,5 @@ namespace: vitorir
 
 images:
 - name: goserver
-  newName: vitoripiranga/gitops
-  newTag: newtag
+  newName: vitoripiranga/gitopsfc
+  newTag: c70fd9b763570d8c876693c72c19491f6516a63c
