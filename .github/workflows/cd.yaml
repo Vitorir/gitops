@@ -20,3 +20,27 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
         tags: ${{ github.sha }}, latest
+
+    - name: Setup Kustomize
+      uses: kubestack/setup-kustomize@v1.0.0
+      with:
+        version: 4.5.2
+
+    - name: Update Kubernetes Resources
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      run: |
+        cd k8s
+        kustomize edit set image goserver=$DOCKER_USERNAME/gitops:${{ github.sha }} 
+
+    - name: Commit
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git commit -am "Update image to ${{ github.sha }}"
+
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN}}
+        repository: vitorir/gitops
