@@ -8,4 +8,4 @@ resources:
 images:
 - name: goserver
   newName: vitoripiranga/gitopsfc
-  newTag: d702894b55dc2b79efc55f9b02823e6bb9c89358
+  newTag: f52304d1bd72a0b9466943ad1da9b07582a4cbb3
