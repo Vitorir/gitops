@@ -10,4 +10,4 @@ namespace: gitops
 images:
 - name: goserver
   newName: vitoripiranga/gitopsfc
-  newTag: f49eb21bf74325e259b40e511ee8c84b5d7e8baa
+  newTag: d702894b55dc2b79efc55f9b02823e6bb9c89358
