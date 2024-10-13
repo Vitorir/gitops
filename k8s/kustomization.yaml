@@ -5,7 +5,7 @@ resources:
 - deployment.yaml
 - service.yaml
 
-namespace: vitorir
+namespace: gitops
 
 images:
 - name: goserver
