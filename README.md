@@ -42,8 +42,8 @@ Este projeto utiliza GitOps para gerenciar a implantação de uma aplicação Go
 
 1. Clone este repositório:
    ```
-   git clone [URL_DO_SEU_REPOSITORIO]
-   cd [NOME_DO_DIRETORIO]
+   git clone https://github.com/Vitorir/gitops.git
+   cd gitops
    ```
 
 2. Configure os secrets no GitHub:
@@ -70,7 +70,3 @@ Este projeto utiliza GitOps para gerenciar a implantação de uma aplicação Go
 ## Contribuindo
 
 Contribuições são bem-vindas! Por favor, abra uma issue ou pull request para sugestões ou melhorias.
-
-## Licença
-
-[Sua escolha de licença]
