@@ -1,10 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: goserver
+  name: goserver-service
 spec:
   selector:
     app: goserver
-    ports:
-      - port: 8080
-      targetPort: 8080
+  ports:
+  - port: 8080
+    targetPort: 8080
+
+# Este Service expõe o aplicativo "goserver" dentro do cluster Kubernetes.
+# Ele faz o seguinte:
+# 1. Define um ponto de acesso chamado "goserver-service"
+# 2. Seleciona todos os pods com o rótulo "app: goserver"
+# 3. Encaminha o tráfego da porta 8080 do Service para a porta 8080 dos pods selecionados
+# Isso permite que outros serviços ou pods dentro do cluster se comuniquem com o aplicativo "goserver"
+# usando o nome "goserver-service" e a porta 8080.
