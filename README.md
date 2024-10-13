@@ -1,25 +1,24 @@
 # Projeto GitOps com Kubernetes
+## Descrição
 
-Este projeto demonstra uma abordagem GitOps para gerenciar e implantar uma aplicação Go em um cluster Kubernetes.
+Este projeto utiliza GitOps para gerenciar a implantação de uma aplicação Go em um cluster Kubernetes. A aplicação é containerizada usando Docker e implantada usando manifestos Kubernetes.
 
 ## Estrutura do Projeto
+```
 .
 ├── .github
-│ └── workflows
-│ └── ci.yml
+│   └── workflows
+│       └── ci.yml
 ├── k8s
-│ ├── deployment.yaml
-│ ├── kustomization.yaml
-│ └── service.yaml
+│   ├── deployment.yaml
+│   ├── kustomization.yaml
+│   └── service.yaml
 ├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── main.go
 └── README.md
-
-## Descrição
-
-Este projeto utiliza GitOps para gerenciar a implantação de uma aplicação Go em um cluster Kubernetes. A aplicação é containerizada usando Docker e implantada usando manifestos Kubernetes.
+```
 
 ### Componentes Principais
 
